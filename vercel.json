@@ -1,6 +1,5 @@
 {
     "version": 2,
-    "buildCommand": "composer install --no-dev --optimize-autoloader && php artisan config:clear && php artisan view:clear && php artisan route:clear",
     "builds": [
         {
             "src": "api/index.php",
