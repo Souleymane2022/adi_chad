@@ -31,7 +31,7 @@
         "APP_NAME": "ADI Chad",
         "APP_ENV": "production",
         "APP_KEY": "base64:UyBr6PU/0tXdLmQEurqK2jwEF9TTIl+aLl4jUULi6Io=",
-        "APP_DEBUG": "false",
+        "APP_DEBUG": "true",
         "APP_URL": "https://adi-chad-git-main-souleymanemahamatsaleh2000-8176s-projects.vercel.app",
         "LOG_CHANNEL": "stderr",
         "LOG_LEVEL": "error",
