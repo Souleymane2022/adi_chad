@@ -8,9 +8,6 @@
  * to prevent "Target class [view] does not exist" and similar errors.
  */
 
-// Set the application base path
-define('LARAVEL_START', microtime(true));
-
 // Point Laravel storage to /tmp (the only writable dir on Vercel)
 $_ENV['APP_STORAGE_PATH'] = '/tmp/storage';
 putenv('APP_STORAGE_PATH=/tmp/storage');
