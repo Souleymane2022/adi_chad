@@ -41,6 +41,8 @@
         "QUEUE_CONNECTION": "sync",
         "FILESYSTEM_DISK": "local",
         "DB_CONNECTION": "sqlite",
-        "DB_DATABASE": "/tmp/database.sqlite"
+        "DB_DATABASE": "/tmp/database.sqlite",
+        "VIEW_COMPILED_PATH": "/tmp/storage/framework/views",
+        "ASSET_URL": "https://adi-chad.vercel.app"
     }
 }
