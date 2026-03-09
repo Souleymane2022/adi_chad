@@ -15,7 +15,7 @@
     ],
     "routes": [
         {
-            "src": "/(css|js|images|build)/(.*)",
+            "src": "/(build|css|js|images)/(.*)",
             "dest": "/public/$1/$2"
         },
         {
@@ -30,11 +30,10 @@
     "env": {
         "APP_NAME": "ADI Chad",
         "APP_ENV": "production",
-        "APP_KEY": "base64:UyBr6PU/0tXdLmQEurqK2jwEF9TTIl+aLl4jUULi6Io=",
         "APP_DEBUG": "true",
-        "APP_URL": "https://adi-chad-git-main-souleymanemahamatsaleh2000-8176s-projects.vercel.app",
+        "APP_URL": "https://adi-chad.vercel.app",
         "LOG_CHANNEL": "stderr",
-        "LOG_LEVEL": "error",
+        "LOG_LEVEL": "debug",
         "CACHE_DRIVER": "array",
         "SESSION_DRIVER": "cookie",
         "SESSION_LIFETIME": "120",
@@ -42,7 +41,6 @@
         "FILESYSTEM_DISK": "local",
         "DB_CONNECTION": "sqlite",
         "DB_DATABASE": "/tmp/database.sqlite",
-        "VIEW_COMPILED_PATH": "/tmp/storage/framework/views",
-        "ASSET_URL": "https://adi-chad.vercel.app"
+        "VIEW_COMPILED_PATH": "/tmp/storage/framework/views"
     }
 }
