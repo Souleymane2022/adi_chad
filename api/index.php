@@ -9,23 +9,31 @@
 
 // ── 1. Storage & Cache paths ────────────────────────────────────────────────
 $storagePath = '/tmp/storage';
-$cachePath = '/tmp/storage/bootstrap/cache';
+$cachePath = $storagePath . '/bootstrap/cache';
 
-$_ENV['APP_STORAGE_PATH'] = $storagePath;
-putenv("APP_STORAGE_PATH={$storagePath}");
+// Load composer to access Illuminate\Support\Env
+require __DIR__ . '/../vendor/autoload.php';
 
-// Redirect Laravel cache files to /tmp
-$_ENV['LARAVEL_SERVICES_CACHE'] = $cachePath . '/services.php';
-$_ENV['LARAVEL_PACKAGES_CACHE'] = $cachePath . '/packages.php';
-$_ENV['LARAVEL_CONFIG_CACHE'] = $cachePath . '/config.php';
-$_ENV['LARAVEL_ROUTES_CACHE'] = $cachePath . '/routes-v7.php';
-$_ENV['LARAVEL_EVENTS_CACHE'] = $cachePath . '/events.php';
+// Force environment variables in Laravel's internal repository
+// This ensures that env('LARAVEL_PACKAGES_CACHE') etc. return the /tmp paths
+$envRepo = \Illuminate\Support\Env::getRepository();
 
-putenv("LARAVEL_SERVICES_CACHE={$cachePath}/services.php");
-putenv("LARAVEL_PACKAGES_CACHE={$cachePath}/packages.php");
-putenv("LARAVEL_CONFIG_CACHE={$cachePath}/config.php");
-putenv("LARAVEL_ROUTES_CACHE={$cachePath}/routes-v7.php");
-putenv("LARAVEL_EVENTS_CACHE={$cachePath}/events.php");
+$vars = [
+    'APP_STORAGE_PATH'       => $storagePath,
+    'LARAVEL_SERVICES_CACHE' => $cachePath . '/services.php',
+    'LARAVEL_PACKAGES_CACHE' => $cachePath . '/packages.php',
+    'LARAVEL_CONFIG_CACHE'   => $cachePath . '/config.php',
+    'LARAVEL_ROUTES_CACHE'   => $cachePath . '/routes-v7.php',
+    'LARAVEL_EVENTS_CACHE'   => $cachePath . '/events.php',
+    'VIEW_COMPILED_PATH'     => $storagePath . '/framework/views',
+];
+
+foreach ($vars as $key => $value) {
+    $_ENV[$key] = $value;
+    $_SERVER[$key] = $value;
+    putenv("{$key}={$value}");
+    $envRepo->set($key, $value);
+}
 
 // Create all required writable directories
 $dirs = [
@@ -43,12 +51,12 @@ foreach ($dirs as $dir) {
     }
 }
 
-// ── 2. Clear stale bootstrap cache (if any exists in the read-only repo) ──
+// ── 2. Check for stale bootstrap cache (should be empty in the read-only repo)
 $bootstrapCache = __DIR__ . '/../bootstrap/cache';
 $cacheFiles = ['services.php', 'packages.php', 'config.php', 'routes-v7.php', 'events.php'];
 foreach ($cacheFiles as $file) {
     $path = $bootstrapCache . '/' . $file;
-    if (file_exists($path)) {
+    if (file_exists($path) && is_writable($path)) {
         @unlink($path);
     }
 }
@@ -60,4 +68,5 @@ if (!file_exists($sqlitePath)) {
 }
 
 // ── 4. Forward to standard Laravel entrypoint ──────────────────────────────
-require __DIR__ . '/../public/index.php';
+// (Autoload already loaded above)
+require_once __DIR__ . '/../public/index.php';
