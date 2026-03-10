@@ -164,8 +164,9 @@ body {
 /* ===== Carte ===== */
 .map-container {
     margin-top: 20px;
-    width: 280px;   /* petite taille */
-    height: 180px;
+    width: 100%;       /* Full width on mobile */
+    max-width: 400px;  /* Limit max size */
+    height: 250px;     /* Slightly taller for better visibility */
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 12px rgba(0,0,0,0.3);
@@ -229,7 +230,8 @@ transition: all 1s cubic-bezier(0.22, 1, 0.36, 1);
 /* Carte activité */
 .activity-card {
   position: relative;
-  min-width: 280px;
+  width: 100%;      /* Dynamic width */
+  max-width: 320px; /* Cap size */
   height: 380px;
   border-radius: 20px;
   overflow: hidden;
@@ -374,6 +376,17 @@ transition: opacity 1s cubic-bezier(0.22, 1, 0.36, 1),
 
 
 
+
+/* Prevent horizontal overflow globally */
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
+}
+
+section {
+  overflow-x: hidden;
+}
 </style>
  <body class="font-poppins text-gray-800 text-base sm:text-lg lg:text-xl">
 <!-- ================= HEADER ================= -->
