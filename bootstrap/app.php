@@ -11,9 +11,24 @@
 |
 */
 
-$app = new Illuminate\Foundation\Application(
-    $_ENV['APP_BASE_PATH'] ?? dirname(__DIR__)
-);
+$app = new class($_ENV['APP_BASE_PATH'] ?? dirname(__DIR__)) extends Illuminate\Foundation\Application {
+    /**
+     * Get the path to the bootstrap directory.
+     *
+     * @param  string  $path
+     * @return string
+     */
+    public function bootstrapPath($path = '')
+    {
+        // On Vercel, redirect cache files to /tmp
+        if (isset($_ENV['APP_STORAGE_PATH']) && str_starts_with($_ENV['APP_STORAGE_PATH'], '/tmp')) {
+            $base = $_ENV['APP_STORAGE_PATH'] . '/bootstrap';
+            return $base . ($path ? DIRECTORY_SEPARATOR . $path : $path);
+        }
+
+        return parent::bootstrapPath($path);
+    }
+};
 
 // On Vercel, only /tmp is writable. Redirect storage and cache there.
 if (isset($_ENV['APP_STORAGE_PATH'])) {

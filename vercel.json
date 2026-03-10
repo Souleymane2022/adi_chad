@@ -41,11 +41,6 @@
         "FILESYSTEM_DISK": "local",
         "DB_CONNECTION": "sqlite",
         "DB_DATABASE": "/tmp/database.sqlite",
-        "VIEW_COMPILED_PATH": "/tmp/storage/framework/views",
-        "LARAVEL_SERVICES_CACHE": "/tmp/storage/bootstrap/cache/services.php",
-        "LARAVEL_PACKAGES_CACHE": "/tmp/storage/bootstrap/cache/packages.php",
-        "LARAVEL_CONFIG_CACHE": "/tmp/storage/bootstrap/cache/config.php",
-        "LARAVEL_ROUTES_CACHE": "/tmp/storage/bootstrap/cache/routes-v7.php",
-        "LARAVEL_EVENTS_CACHE": "/tmp/storage/bootstrap/cache/events.php"
+        "VIEW_COMPILED_PATH": "/tmp/storage/framework/views"
     }
 }
