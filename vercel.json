@@ -15,7 +15,7 @@
     ],
     "routes": [
         {
-            "src": "/(build|css|js|images)/(.*)",
+            "src": "/(build|css|js|image|images)/(.*)",
             "dest": "/public/$1/$2"
         },
         {
@@ -30,10 +30,10 @@
     "env": {
         "APP_NAME": "ADI Chad",
         "APP_ENV": "production",
-        "APP_DEBUG": "true",
+        "APP_DEBUG": "false",
         "APP_URL": "https://adi-chad.vercel.app",
         "LOG_CHANNEL": "stderr",
-        "LOG_LEVEL": "debug",
+        "LOG_LEVEL": "info",
         "CACHE_DRIVER": "array",
         "SESSION_DRIVER": "cookie",
         "SESSION_LIFETIME": "120",
