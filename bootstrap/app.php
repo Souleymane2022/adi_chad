@@ -15,9 +15,27 @@ $app = new Illuminate\Foundation\Application(
     $_ENV['APP_BASE_PATH'] ?? dirname(__DIR__)
 );
 
-// On Vercel, only /tmp is writable. Redirect storage there.
+// On Vercel, only /tmp is writable. Redirect storage and cache there.
 if (isset($_ENV['APP_STORAGE_PATH'])) {
     $app->useStoragePath($_ENV['APP_STORAGE_PATH']);
+    
+    // Also redirect bootstrap cache
+    $cachePath = $_ENV['APP_STORAGE_PATH'] . '/bootstrap/cache';
+    if (!is_dir($cachePath)) {
+        mkdir($cachePath, 0755, true);
+    }
+
+    $_ENV['LARAVEL_SERVICES_CACHE'] = $cachePath . '/services.php';
+    $_ENV['LARAVEL_PACKAGES_CACHE'] = $cachePath . '/packages.php';
+    $_ENV['LARAVEL_CONFIG_CACHE'] = $cachePath . '/config.php';
+    $_ENV['LARAVEL_ROUTES_CACHE'] = $cachePath . '/routes-v7.php';
+    $_ENV['LARAVEL_EVENTS_CACHE'] = $cachePath . '/events.php';
+
+    putenv("LARAVEL_SERVICES_CACHE={$_ENV['LARAVEL_SERVICES_CACHE']}");
+    putenv("LARAVEL_PACKAGES_CACHE={$_ENV['LARAVEL_PACKAGES_CACHE']}");
+    putenv("LARAVEL_CONFIG_CACHE={$_ENV['LARAVEL_CONFIG_CACHE']}");
+    putenv("LARAVEL_ROUTES_CACHE={$_ENV['LARAVEL_ROUTES_CACHE']}");
+    putenv("LARAVEL_EVENTS_CACHE={$_ENV['LARAVEL_EVENTS_CACHE']}");
 }
 
 /*
