@@ -1535,28 +1535,32 @@ document.addEventListener("DOMContentLoaded", () => {
 </div>
 
 
+
 <script>
-  const images = [
-    "1.jpeg",
-    "2.jpeg",
-    "3.jpg"
-  ];
+  function openModal(el) {
+    const mainImage = document.getElementById('modalMainImage');
+    const thumbnails = document.getElementById('modalThumbnails');
+    const imageList = el.getAttribute('data-images').split(',');
+    
+    mainImage.src = imageList[0];
+    thumbnails.innerHTML = '';
+    
+    imageList.forEach((src, index) => {
+        const thumb = document.createElement('img');
+        thumb.src = src;
+        thumb.className = 'w-20 h-16 object-cover cursor-pointer border hover:border-blue-500';
+        thumb.onclick = () => { mainImage.src = src; };
+        thumbnails.appendChild(thumb);
+    });
+    
+    document.getElementById('imageModal').classList.remove('hidden');
+    document.getElementById('imageModal').classList.add('flex');
+  }
 
-  let index = 0;
-
-  const modal = document.getElementById("galleryModal");
-  const openBtn = document.getElementById("openBtn");
-  const closeBtn = document.getElementById("closeBtn");
-  const img = document.getElementById("galleryImage");
-
-  openBtn.onclick = function () {
-    modal.style.display = "flex";
-    img.src = images[index];
-  };
-
-  closeBtn.onclick = function () {
-    modal.style.display = "none";
-  };
+  function closeModal() {
+    document.getElementById('imageModal').classList.add('hidden');
+    document.getElementById('imageModal').classList.remove('flex');
+  }
 </script>
 <!-- ===== MODAL GALERIE ===== -->
 <div id="galleryModal"
@@ -1785,30 +1789,37 @@ document.addEventListener("DOMContentLoaded", () => {
     <button onclick="nextImage2()"
             class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 text-white px-3 py-2 rounded-full">❯</button>
 
-    <div class="flex justify-center gap-3 mt-4">
-        <img src="/v1.jpeg" onclick="changeImage2(0)" class="w-20 h-16 object-cover cursor-pointer border">
-      <img src="/V5.jpeg" onclick="changeImage2(0)" class="w-20 h-16 object-cover cursor-pointer border">
-      <img src="/V6.jpeg" onclick="changeImage2(1)" class="w-20 h-16 object-cover cursor-pointer border">
-      <img src="/V7.jpeg" onclick="changeImage2(2)" class="w-20 h-16 object-cover cursor-pointer border">
-      <img src="/V8.jpeg" onclick="changeImage2(3)" class="w-20 h-16 object-cover cursor-pointer border">
-       <img src="/T2.jpeg" onclick="changeImage2(3)" class="w-20 h-16 object-cover cursor-pointer border">
-        <img src="/T3.jpeg" onclick="changeImage2(3)" class="w-20 h-16 object-cover cursor-pointer border">
-         <img src="/T4.jpeg" onclick="changeImage2(3)" class="w-20 h-16 object-cover cursor-pointer border">
+    <div class="flex justify-center gap-3 mt-4 flex-wrap overflow-y-auto max-h-32">
+        <img src="/image/v1.jpeg" onclick="changeImage2(0)" class="w-20 h-16 object-cover cursor-pointer border hover:border-blue-500">
+        <img src="/image/V5.jpeg" onclick="changeImage2(1)" class="w-20 h-16 object-cover cursor-pointer border hover:border-blue-500">
+        <img src="/image/V6.jpeg" onclick="changeImage2(2)" class="w-20 h-16 object-cover cursor-pointer border hover:border-blue-500">
+        <img src="/image/V7.jpeg" onclick="changeImage2(3)" class="w-20 h-16 object-cover cursor-pointer border hover:border-blue-500">
+        <img src="/image/8.jpeg"  onclick="changeImage2(4)" class="w-20 h-16 object-cover cursor-pointer border hover:border-blue-500">
+        <img src="/image/V2.jpeg" onclick="changeImage2(7)" class="w-20 h-16 object-cover cursor-pointer border hover:border-blue-500">
+        <img src="/image/T2.jpeg" onclick="changeImage2(13)" class="w-20 h-16 object-cover cursor-pointer border hover:border-blue-500">
+        <img src="/image/T3.jpeg" onclick="changeImage2(14)" class="w-20 h-16 object-cover cursor-pointer border hover:border-blue-500">
     </div>
   </div>
 </div>
 
+
 <script>
-const images2 = ["/v1.jpeg","/V5.jpeg","/V6.jpeg","/V7.jpeg","/8.jpeg","/V4.jpeg","/V3.jpeg","V2.jpeg",
-"V9.jpeg","V10.jpeg","V11.jpeg","V12.jpeg","V13.jpeg","V14.jpeg","T2.jpeg","T3.jpeg","T4.jpeg"];
+const images2 = [
+    "/image/v1.jpeg", "/image/V5.jpeg", "/image/V6.jpeg", "/image/V7.jpeg", 
+    "/image/8.jpeg", "/image/V4.jpeg", "/image/V3.jpeg", "/image/V2.jpeg",
+    "/image/V9.jpeg", "/image/V10.jpeg", "/image/V12.jpeg", "/image/V13.jpeg", 
+    "/image/V14.jpeg", "/image/T2.jpeg", "/image/T3.jpeg", "/image/T4.jpeg"
+];
 let index2 = 0;
 
 function openGallery2(){
+  document.getElementById("galleryModal2").classList.remove('hidden');
   document.getElementById("galleryModal2").style.display = "flex";
   showImage2();
 }
 
 function closeGallery2(){
+  document.getElementById("galleryModal2").classList.add('hidden');
   document.getElementById("galleryModal2").style.display = "none";
 }
 

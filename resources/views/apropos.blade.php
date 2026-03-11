@@ -597,7 +597,7 @@
   <div class="header-container">
 
     <div class="logo">
-      <img src="2P1.jpeg" alt="ADI CHAD">
+      <img src="/image/2P1.jpeg" alt="ADI CHAD">
       <!-- <span>ADI CHAD</span> (optionnel) -->
     </div>
 
@@ -636,23 +636,23 @@
 
    <div class="about-image">
   <div class="about-gallery">
-    <div class="gallery-item">
-      <img src="1.jpeg">
+    <div class="gallery-item" onclick="openModal(this)" data-images="/image/1.jpeg">
+      <img src="/image/1.jpeg">
       <span class="view-icon">👁</span>
     </div>
 
-    <div class="gallery-item">
-      <img src="2.jpeg">
+    <div class="gallery-item" onclick="openModal(this)" data-images="/image/2.jpeg">
+      <img src="/image/2.jpeg">
       <span class="view-icon">👁</span>
     </div>
 
-    <div class="gallery-item">
-      <img src="3.jpeg">
+    <div class="gallery-item" onclick="openModal(this)" data-images="/image/3.jpeg">
+      <img src="/image/3.jpeg">
       <span class="view-icon">👁</span>
     </div>
 
-    <div class="gallery-item">
-      <img src="4.jpeg">
+    <div class="gallery-item" onclick="openModal(this)" data-images="/image/4.jpeg">
+      <img src="/image/4.jpeg">
       <span class="view-icon">👁</span>
     </div>
   </div>
@@ -853,6 +853,47 @@ modal.addEventListener('click', (e) => {
 
 </script>
 
+
+
+<!-- MODAL IMAGE -->
+<div id="imageModal"
+     class="fixed inset-0 bg-black/80 hidden items-center justify-center z-[10000]">
+  <div class="relative bg-white rounded-lg max-w-4xl w-full p-4">
+    <button onclick="closeModal()"
+            class="absolute top-2 right-2 text-2xl text-gray-600 hover:text-red-600">✕</button>
+    <img id="modalMainImage" src="" class="w-full h-96 object-contain rounded">
+    <div id="modalThumbnails" class="flex gap-3 justify-center mt-4 flex-wrap"></div>
+  </div>
+</div>
+
+<script>
+  function openModal(el) {
+    const mainImage = document.getElementById('modalMainImage');
+    const thumbnails = document.getElementById('modalThumbnails');
+    const imageList = el.getAttribute('data-images').split(',');
+    
+    mainImage.src = imageList[0];
+    thumbnails.innerHTML = '';
+    
+    if (imageList.length > 1) {
+        imageList.forEach((src) => {
+            const thumb = document.createElement('img');
+            thumb.src = src;
+            thumb.className = 'w-20 h-16 object-cover cursor-pointer border hover:border-blue-500';
+            thumb.onclick = () => { mainImage.src = src; };
+            thumbnails.appendChild(thumb);
+        });
+    }
+    
+    document.getElementById('imageModal').classList.remove('hidden');
+    document.getElementById('imageModal').classList.add('flex');
+  }
+
+  function closeModal() {
+    document.getElementById('imageModal').classList.add('hidden');
+    document.getElementById('imageModal').classList.remove('flex');
+  }
+</script>
 
 </body>
 </html>
