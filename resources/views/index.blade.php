@@ -1521,6 +1521,12 @@ document.addEventListener("DOMContentLoaded", () => {
       ✕
     </button>
 
+    <!-- Bouton Télécharger -->
+    <a id="downloadBtn" href="" download
+       class="absolute top-2 right-12 bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700">
+      <i class="fas fa-download mr-1"></i> Télécharger
+    </a>
+
     <!-- Image principale -->
     <img id="modalMainImage"
          src=""
@@ -1540,16 +1546,21 @@ document.addEventListener("DOMContentLoaded", () => {
   function openModal(el) {
     const mainImage = document.getElementById('modalMainImage');
     const thumbnails = document.getElementById('modalThumbnails');
+    const downloadBtn = document.getElementById('downloadBtn');
     const imageList = el.getAttribute('data-images').split(',');
     
     mainImage.src = imageList[0];
+    downloadBtn.href = imageList[0];
     thumbnails.innerHTML = '';
     
     imageList.forEach((src, index) => {
         const thumb = document.createElement('img');
         thumb.src = src;
         thumb.className = 'w-20 h-16 object-cover cursor-pointer border hover:border-blue-500';
-        thumb.onclick = () => { mainImage.src = src; };
+        thumb.onclick = () => { 
+            mainImage.src = src; 
+            downloadBtn.href = src;
+        };
         thumbnails.appendChild(thumb);
     });
     
@@ -1789,6 +1800,14 @@ document.addEventListener("DOMContentLoaded", () => {
     <button onclick="nextImage2()"
             class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 text-white px-3 py-2 rounded-full">❯</button>
 
+    <!-- Bouton Télécharger -->
+    <div class="text-center mt-2">
+      <a id="downloadBtn2" href="" download
+         class="inline-block bg-blue-600 text-white px-4 py-2 rounded text-sm hover:bg-blue-700">
+        <i class="fas fa-download mr-2"></i> Télécharger cette image
+      </a>
+    </div>
+
     <div class="flex justify-center gap-3 mt-4 flex-wrap overflow-y-auto max-h-32">
         <img src="/image/v1.jpeg" onclick="changeImage2(0)" class="w-20 h-16 object-cover cursor-pointer border hover:border-blue-500">
         <img src="/image/V5.jpeg" onclick="changeImage2(1)" class="w-20 h-16 object-cover cursor-pointer border hover:border-blue-500">
@@ -1824,7 +1843,9 @@ function closeGallery2(){
 }
 
 function showImage2(){
-  document.getElementById("mainImage2").src = images2[index2];
+  const imgUrl = images2[index2];
+  document.getElementById("mainImage2").src = imgUrl;
+  document.getElementById("downloadBtn2").href = imgUrl;
 }
 
 function nextImage2(){
