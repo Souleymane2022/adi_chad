@@ -431,7 +431,7 @@ section {
 </header>
 
 <!-- ================= HERO SLIDER ================= -->
-<section  id="accueil" class="h-screen relative overflow-hidden mt-16">
+<section  id="accueil" class="h-[65vh] sm:h-screen relative overflow-hidden mt-16">
     <!-- Flèche gauche -->
 <button id="prev"
   class="absolute left-4 top-1/2 -translate-y-1/2 z-20
@@ -452,7 +452,7 @@ section {
 <div id="slider"class="h-full flex w-full transition-transform duration-700 ease-in-out">
 
     <!-- Slide 1 -->
-   <div class="min-w-full h-full relative bg-cover bg-center"
+   <div class="min-w-full h-full relative bg-cover bg-[center_top] sm:bg-center"
      style="background-image:url('/image/1.jpeg');">
 
   <!-- Overlay noir transparent -->
@@ -461,8 +461,8 @@ section {
   <!-- Contenu -->
   <div class="relative z-10 h-full flex items-center justify-center text-white text-center px-6">
     <div>
-  <h2 class="text-5xl font-bold">ADI CHAD</h2>
-  <p class="mt-4 text-xl">Au service de votre confort digital</p>
+  <h2 class="text-3xl sm:text-5xl font-bold">ADI CHAD</h2>
+  <p class="mt-4 text-lg sm:text-xl">Au service de votre confort digital</p>
 
   <!-- Boutons -->
   <div class="mt-6 flex justify-center gap-4 flex-wrap">
@@ -490,7 +490,7 @@ section {
 
     <!-- Slide 2 -->
 
-    <div class="min-w-full h-full relative bg-cover bg-center"
+    <div class="min-w-full h-full relative bg-cover bg-[center_top] sm:bg-center"
      style="background-image:url('/image/T1.jpeg');">
 
   <!-- Overlay noir transparent -->
@@ -499,8 +499,8 @@ section {
   <!-- Contenu -->
   <div class="relative z-10 h-full flex items-center justify-center text-white text-center px-6">
     <div>
-      <h2 class="text-5xl font-bold">ADI CHAD</h2>
-      <h2 class="text-3xl font-bold">Votre partenaire en Communication Digitale</h2>
+      <h2 class="text-3xl sm:text-5xl font-bold">ADI CHAD</h2>
+      <h2 class="text-xl sm:text-3xl font-bold">Votre partenaire en Communication Digitale</h2>
         <p class="mt-4">
           Nous accompagnons les entreprises et les institutions dans leur transformation digitale.<br>
           grâce à des services professionnels, créatifs et adaptés à leurs besoins.
@@ -511,7 +511,7 @@ section {
 </div>
 
     <!-- Slide 3 -->
-    <div class="min-w-full h-full relative bg-cover bg-center"
+    <div class="min-w-full h-full relative bg-cover bg-[center_top] sm:bg-center"
      style="background-image:url('/image/5.jpeg');">
 
   <!-- Overlay noir transparent -->
@@ -529,7 +529,7 @@ section {
 
     <!-- Slide 4 -->
 
-     <div class="min-w-full h-full relative bg-cover bg-center"
+     <div class="min-w-full h-full relative bg-cover bg-[center_top] sm:bg-center"
      style="background-image:url('/image/12.jpeg');">
 
   <!-- Overlay noir transparent -->
