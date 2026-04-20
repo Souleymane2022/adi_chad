@@ -553,28 +553,28 @@ section {
   <div class="max-w-7xl mx-auto grid md:grid-cols-5 gap-8 text-center">
 
     <div>
-      <h3 class="counter text-4xl font-bold text-yellow-500" data-target="2">0</h3>
+      <h3 class="counter text-4xl font-bold text-yellow-500" data-target="3">0</h3>
       <p>Ans d’expérience</p>
     </div>
 
     <div>
-      <h3 class="counter text-4xl font-bold text-yellow-500" data-target="600">0</h3>
-      <p>Clients & projets</p>
-    </div>
-
-    <div>
-      <h3 class="counter text-4xl font-bold text-yellow-500" data-target="10">0</h3>
-      <p>Insertion (%)</p>
-    </div>
-
-    <div>
       <h3 class="counter text-4xl font-bold text-yellow-500" data-target="15">0</h3>
+      <p>Insertions professionnelles</p>
+    </div>
+
+    <div>
+      <h3 class="counter text-4xl font-bold text-yellow-500" data-target="20">0</h3>
       <p>Partenaires</p>
     </div>
 
     <div>
       <h3 class="counter text-4xl font-bold text-yellow-500" data-target="4">0</h3>
       <p>Distinctions</p>
+    </div>
+
+    <div>
+      <h3 class="counter text-4xl font-bold text-yellow-500" data-target="4">0</h3>
+      <p>Participations à l’international</p>
     </div>
 
   </div>
@@ -606,9 +606,9 @@ section {
       </h2>
 
       <p class="text-gray-700 leading-relaxed mb-6">
-       ADI CHAD est une agence professionnelle de communication digitale, spécialisée dans l’impression
-        de supports de communication, la création de contenus visuels et le développement de solutions
-        numériques..
+      ADI CHAD est une agence de communication digitale innovante, spécialisée dans le marketing digital, la conception graphique, la création de sites web, l’imprimerie et la production audiovisuelle.
+Nous accompagnons les entreprises, institutions et organisations dans le développement de leur visibilité grâce à des solutions numériques performantes et adaptées à leurs besoins.
+ADI CHAD dispose également d’une EdTech innovante, dédiée à l’inclusion et à l’accompagnement des jeunes dans le domaine du numérique, contribuant ainsi au développement des compétences digitales au Tchad et en Afrique
       </p>
 
       <!-- IMAGE 1 MOBILE -->
@@ -619,8 +619,7 @@ section {
       <!-- OBJECTIF -->
       <h3 class="font-bold text-lg mb-2">Notre objectif</h3>
       <p class="text-gray-700 leading-relaxed mb-6">
-        Renforcer l’impact et la notoriété de nos clients en proposant des
-        solutions de communication efficaces, créatives et durables.
+        Accroître la visibilité et la notoriété de nos clients en leur offrant des stratégies de communication digitale performantes, innovantes et adaptées à leur marché
       </p>
 
       <!-- IMAGE 2 MOBILE -->
@@ -631,7 +630,7 @@ section {
       <!-- MISSION -->
       <h3 class="font-bold text-lg mb-2">Notre mission</h3>
       <p class="text-gray-700 leading-relaxed mb-6">
-       Renforcer l’impact et la notoriété de nos clients en proposant des solutions de communication efficaces, créatives et durables.
+    Accompagner les entreprises et les jeunes talents dans leur transformation digitale en proposant des solutions créatives, durables et accessibles, tout en favorisant l’inclusion numérique et l’innovation.
       </p>
 
       <!-- EXPERTISE -->
@@ -788,7 +787,7 @@ section {
      ,/image/B2.jpeg,/image/B2.jpeg,/image/B4.jpeg,/image/B5.jpeg
      ,/image/B6.jpeg,/image/B7.jpeg,/image/B8.jpeg,/image/B9.jpeg,/image/B10.jpeg">
 
-  <img src="/image/c.jpeg"
+  <img src="/image/B1.jpeg"
        class="
   w-full
   aspect-square
@@ -844,7 +843,7 @@ section {
      data-images="/image/i2.jpeg,/image/i3.jpeg,/image/i4.jpeg,/image/i5.jpeg,/image/i10.jpeg,/image/i11.jpeg,/image/i12.jpeg,/image/i14.jpeg
      ,/image/i15.jpeg,/image/i16.jpeg">
 
-  <img src="/image/cc.jpeg"
+  <img src="/image/B3.jpeg"
        class="
   w-full
   aspect-square
@@ -932,10 +931,10 @@ section {
 
   <!-- Overlay -->
   <div class="overlay">
-    <span class="date">2026</span>
+    <span class="date"></span>
     <h3>Projet TchadSearh</h3>
     <p>
-     Présentation du projet TchadSearch par AdiTChad dans le festival dary Tech
+    Présentation du projet TchadSearch lors du Festival Dary Tech 2025
     </p>
   </div>
 
@@ -948,6 +947,7 @@ section {
   <div class="image-rotator">
     <img src="/image/A1.jpeg" class="active" alt="">
     <img src="/image/A2.jpeg" alt="">
+     <img src="/image/A2.jpeg" alt="">
   </div>
 
   <!-- Overlay -->
@@ -957,7 +957,7 @@ section {
     <p>
       Attestation de reconnaissance pour son soutien au service
       communication pour l'association action pour l'eduction et de la promotion de la femme-
-      AEPT-TCHAD
+      AEPT-TCHAD.
     </p>
   </div>
 
@@ -1012,9 +1012,10 @@ section {
   <!-- Overlay -->
   <div class="overlay">
     {{--  <span class="date">2025</span>  --}}
-    <h3>Journée de l’Entrepreneuriat Féminin</h3>
+    <h3>JIF 2025</h3>
     <p>
-    Formation dédiée aux femmes à l’occasion de la Journée internationale des femmes, en mars 2025, pour 100 jeunes femmes dans les métiers du numérique et de l’audiovisuel.
+   Formation des jeunes femmes dans le domaine du
+    numérique à l’occasion de la Journée Internationale des Droits des Femmes.
     </p>
   </div>
 
@@ -1032,7 +1033,7 @@ section {
   <!-- Overlay -->
   <div class="overlay">
     {{--  <span class="date">2025</span>  --}}
-    <h3>Journée de l’Entrepreneuriat Féminin</h3>
+    <h3>Conference Debat</h3>
     <p>
       Sensibilisation et formation aux métiers du numérique pour les jeunes femmes.
     </p>
@@ -1053,10 +1054,11 @@ section {
 
   <!-- Overlay -->
   <div class="overlay">
-    <span class="date">Du 20 au 4 janvier 2026</span>
-    <h3>Le 2e Exposition d ADI Chad au festival Dary Tech </h3>
+    <span class="date">Du 20 décembre 2025 au 04 janvier 2026</span>
+    <h3>Exposition ADI CHAD au Festival Dary Tech 2025</h3>
     <p>
-Le Festival Dary est donc une fête de la culture qui contribue à la valorisation et à la promotion de l’héritage tchadien.
+Le Festival Dary est donc une fête de la culture qui contribue
+ à la valorisation et à la promotion de l’héritage tchadien.
     </p>
   </div>
 
@@ -1101,57 +1103,57 @@ Le Festival Dary est donc une fête de la culture qui contribue à la valorisati
 <div class="overflow-hidden relative">
   <div class="flex items-center gap-8 animate-scroll whitespace-nowrap">
 
-    <div class="bg-white rounded-xl shadow flex items-center justify-center p-6 min-w-[180px]">
+    <div class="bg-white rounded-xl shadow flex items-center justify-center p-6 min-w-[120px] md:min-w-[180px]">
       <img src="/image/X1.jpeg" alt="Partenaire 1" class="h-12 object-contain">
     </div>
 
-    <div class="bg-white rounded-xl shadow flex items-center justify-center p-6 min-w-[180px]">
+    <div class="bg-white rounded-xl shadow flex items-center justify-center p-6 min-w-[120px] md:min-w-[180px]">
       <img src="/image/X2.jpeg" alt="Partenaire 1" class="h-12 object-contain">
     </div>
 
 
 
     <!-- Logo 1 -->
-    <div class="bg-white rounded-xl shadow flex items-center justify-center p-6 min-w-[180px]">
+    <div class="bg-white rounded-xl shadow flex items-center justify-center p-6 min-w-[120px] md:min-w-[180px]">
       <img src="/image/p1.jpg" alt="Partenaire 1" class="h-12 object-contain">
     </div>
 
     <!-- Logo 2 -->
-    <div class="bg-white rounded-xl shadow flex items-center justify-center p-6 min-w-[180px]">
+    {{--  <div class="bg-white rounded-xl shadow flex items-center justify-center p-6 min-w-[120px] md:min-w-[180px]">
       <img src="/image/p2.jpg" alt="Partenaire 2" class="h-12 object-contain">
-    </div>
+    </div>  --}}
 
     <!-- Logo 3 -->
-    <div class="bg-white rounded-xl shadow flex items-center justify-center p-6 min-w-[180px]">
+    {{--  <div class="bg-white rounded-xl shadow flex items-center justify-center p-6 min-w-[120px] md:min-w-[180px]">
       <img src="/image/P3.jpg" alt="Partenaire 3" class="h-12 object-contain">
-    </div>
+    </div>  --}}
 
     <!-- Logo 4 -->
-    <div class="bg-white rounded-xl shadow flex items-center justify-center p-6 min-w-[180px]">
+    <div class="bg-white rounded-xl shadow flex items-center justify-center p-6 min-w-[120px] md:min-w-[180px]">
       <img src="/image/p4.jpg" alt="Partenaire 4" class="h-12 object-contain">
     </div>
 
     <!-- Logo 5 -->
-    <div class="bg-white rounded-xl shadow flex items-center justify-center p-6 min-w-[180px]">
+    <div class="bg-white rounded-xl shadow flex items-center justify-center p-6 min-w-[120px] md:min-w-[180px]">
       <img src="/image/p5.jpg" alt="Partenaire 5" class="h-12 object-contain">
     </div>
 
     <!-- Logo 6 -->
-    <div class="bg-white rounded-xl shadow flex items-center justify-center p-6 min-w-[180px]">
+    <div class="bg-white rounded-xl shadow flex items-center justify-center p-6 min-w-[120px] md:min-w-[180px]">
       <img src="/image/p6.jpg" alt="Partenaire 6" class="h-12 object-contain">
     </div>
 
     <!-- Logo 7 -->
-    <div class="bg-white rounded-xl shadow flex items-center justify-center p-6 min-w-[180px]">
+    <div class="bg-white rounded-xl shadow flex items-center justify-center p-6 min-w-[120px] md:min-w-[180px]">
       <img src="/image/p7.jpg" alt="Partenaire 7" class="h-12 object-contain">
     </div>
 
     <!-- Duplication pour effet infini -->
-    <div class="bg-white rounded-xl shadow flex items-center justify-center p-6 min-w-[180px]">
+    <div class="bg-white rounded-xl shadow flex items-center justify-center p-6 min-w-[120px] md:min-w-[180px]">
       <img src="/image/p1.jpg" alt="Partenaire 1" class="h-12 object-contain">
     </div>
 
-    <div class="bg-white rounded-xl shadow flex items-center justify-center p-6 min-w-[180px]">
+    <div class="bg-white rounded-xl shadow flex items-center justify-center p-6 min-w-[120px] md:min-w-[180px]">
       <img src="/image/X.jpeg" alt="Partenaire 1" class="h-12 object-contain">
     </div>
 
@@ -1548,22 +1550,22 @@ document.addEventListener("DOMContentLoaded", () => {
     const thumbnails = document.getElementById('modalThumbnails');
     const downloadBtn = document.getElementById('downloadBtn');
     const imageList = el.getAttribute('data-images').split(',');
-    
+
     mainImage.src = imageList[0];
     downloadBtn.href = imageList[0];
     thumbnails.innerHTML = '';
-    
+
     imageList.forEach((src, index) => {
         const thumb = document.createElement('img');
         thumb.src = src;
         thumb.className = 'w-20 h-16 object-cover cursor-pointer border hover:border-blue-500';
-        thumb.onclick = () => { 
-            mainImage.src = src; 
+        thumb.onclick = () => {
+            mainImage.src = src;
             downloadBtn.href = src;
         };
         thumbnails.appendChild(thumb);
     });
-    
+
     document.getElementById('imageModal').classList.remove('hidden');
     document.getElementById('imageModal').classList.add('flex');
   }
@@ -1824,9 +1826,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 <script>
 const images2 = [
-    "/image/v1.jpeg", "/image/V5.jpeg", "/image/V6.jpeg", "/image/V7.jpeg", 
+    "/image/v1.jpeg", "/image/V5.jpeg", "/image/V6.jpeg", "/image/V7.jpeg",
     "/image/8.jpeg", "/image/V4.jpeg", "/image/V3.jpeg", "/image/V2.jpeg",
-    "/image/V9.jpeg", "/image/V10.jpeg", "/image/V12.jpeg", "/image/V13.jpeg", 
+    "/image/V9.jpeg", "/image/V10.jpeg", "/image/V12.jpeg", "/image/V13.jpeg",
     "/image/V14.jpeg", "/image/T2.jpeg", "/image/T3.jpeg", "/image/T4.jpeg"
 ];
 let index2 = 0;
@@ -1864,7 +1866,34 @@ function changeImage2(i){
 }
 </script>
 
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const counters = document.querySelectorAll('.counter');
 
+  counters.forEach(counter => {
+    const target = +counter.getAttribute('data-target');
+    const duration = 2000; // durée totale de l'animation en ms
+    const frameRate = 60; // images par seconde approximatives
+    const totalFrames = Math.round((duration / 1000) * frameRate);
+    let frame = 0;
+
+    const counterInterval = setInterval(() => {
+      frame++;
+      const progress = frame / totalFrames;
+      const current = Math.round(target * progress);
+
+      // Afficher le signe + devant
+      counter.textContent = '+' + current;
+
+      if (frame === totalFrames) {
+        // s'assurer d'atteindre exactement la valeur cible
+        counter.textContent = '+' + target;
+        clearInterval(counterInterval);
+      }
+    }, duration / totalFrames);
+  });
+});
+</script>
 
 </body>
 </html>
